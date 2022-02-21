@@ -1,6 +1,5 @@
 package jm.task.core.jdbc.dao;
 
-import com.mysql.cj.jdbc.JdbcConnection;
 import jm.task.core.jdbc.model.User;
 import jm.task.core.jdbc.util.Util;
 
@@ -56,7 +55,6 @@ public class UserDaoJDBCImpl implements UserDao {
     }
 
     public void saveUser(String name, String lastName, byte age) {
-
         //SQL INJECTION
         String sql = String.format("INSERT INTO `user`.`user`(name, lastname, age) VALUES ('%s', '%s', %d)", name, lastName, age);
 
@@ -69,7 +67,6 @@ public class UserDaoJDBCImpl implements UserDao {
     }
 
     public void removeUserById(long id) {
-
         //SQL INJECTION
         String sql = String.format("DELETE FROM user WHERE id=%d", id);
         try {

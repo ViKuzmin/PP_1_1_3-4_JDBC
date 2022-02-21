@@ -2,7 +2,6 @@ package jm.task.core.jdbc.util;
 
 
 import java.sql.Connection;
-import java.sql.Driver;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
@@ -13,12 +12,11 @@ public class Util {
     private static final String USERNAME = "root";
     private static final String PASSWORD = "F4aef2aB";
 
-//Fine code
     public static Connection getMySQLConnection() {
         String hostName = "localhost";
 
         String dbName = "user";
-        String userName = "***";
+        String userName = "root";
         String password = "***";
 
 
@@ -31,7 +29,6 @@ public class Util {
                                                 String userName, String password) {
 
         //Class.forName("com.mysql.jdbc.Driver");
-
         String connectionURL = String.format("jdbc:mysql://%s:3306/%s", hostName, dbName);
 
         try {
