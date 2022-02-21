@@ -1,28 +1,22 @@
 package jm.task.core.jdbc.util;
 
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Util {
     // реализуйте настройку соеденения с БД
-
     private static final String URL = "jdbc:mysql://localhost:3306/user";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "F4aef2aB";
 
     public static Connection getMySQLConnection() {
         String hostName = "localhost";
-
         String dbName = "user";
         String userName = "root";
         String password = "***";
 
-
-
         return getMySQLConnection(hostName, dbName, userName, password);
-
     }
 
     public static Connection getMySQLConnection(String hostName, String dbName,
@@ -39,6 +33,4 @@ public class Util {
         }
         return null;
     }
-
-
 }
