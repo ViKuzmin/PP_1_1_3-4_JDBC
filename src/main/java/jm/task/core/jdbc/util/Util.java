@@ -8,13 +8,13 @@ public class Util {
     // реализуйте настройку соеденения с БД
     private static final String URL = "jdbc:mysql://localhost:3306/user";
     private static final String USERNAME = "root";
-    private static final String PASSWORD = "F4aef2aB";
+    private static final String PASSWORD = "***";
 
     public static Connection getMySQLConnection() {
         String hostName = "localhost";
         String dbName = "user";
         String userName = "root";
-        String password = "***";
+        String password = "F4aef2aB";
 
         return getMySQLConnection(hostName, dbName, userName, password);
     }
