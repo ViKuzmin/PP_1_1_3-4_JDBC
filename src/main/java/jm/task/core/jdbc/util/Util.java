@@ -14,7 +14,7 @@ public class Util {
         String hostName = "localhost";
         String dbName = "user";
         String userName = "root";
-        String password = "F4aef2aB";
+        String password = "***";
 
         return getMySQLConnection(hostName, dbName, userName, password);
     }
