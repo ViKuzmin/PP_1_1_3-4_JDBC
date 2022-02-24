@@ -5,17 +5,14 @@ import jm.task.core.jdbc.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.query.Query;
-
 
 import java.util.List;
 
 public class UserDaoHibernateImpl implements UserDao {
+
     public UserDaoHibernateImpl() {
 
     }
-
-    private SessionFactory sessionFactory;
 
     @Override
     public void createUsersTable() {
@@ -34,9 +31,7 @@ public class UserDaoHibernateImpl implements UserDao {
                     DEFAULT CHARACTER SET = utf8
                     COLLATE = utf8_bin;""";
 
-        //Query query =
         session.createSQLQuery(sql).addEntity(User.class).executeUpdate();
-
         transaction.commit();
         session.close();
     }
@@ -45,11 +40,8 @@ public class UserDaoHibernateImpl implements UserDao {
     public void dropUsersTable() {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
-
         String sql = "DROP TABLE IF EXISTS user";
-        //Query query =
         session.createSQLQuery(sql).addEntity(User.class).executeUpdate();
-
         transaction.commit();
         session.close();
     }
