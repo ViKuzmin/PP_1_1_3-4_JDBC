@@ -7,14 +7,14 @@ public class Main {
 
         UserServiceImpl userService = new UserServiceImpl();
 
-        /*userService.createUsersTable();
+        userService.createUsersTable();
         userService.saveUser("1", "Aaasd", (byte) 15);
         userService.saveUser("2", "Bbbb", (byte) 15);
         userService.saveUser("3", "Ggggg", (byte) 15);
-        userService.saveUser("4", "Ssss", (byte) 15);*/
+        userService.saveUser("4", "Ssss", (byte) 15);
 
-        //userService.removeUserById(3);
-        userService.dropUsersTable();
+        userService.removeUserById(3);
+        //userService.dropUsersTable();
         userService.createUsersTable();
         System.out.println(userService.getAllUsers());
         //userService.cleanUsersTable();
